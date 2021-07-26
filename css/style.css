@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+:root {
+    --backgroundColor: rgb(12, 12, 12);
+    --textColor: rgb(230, 227, 227);
+    --mainBG: rgb(26, 25, 25);
+    --tributeBG: rgb(36, 35, 35);
+    --aColor: rgb(0, 153, 255);
+    --aVisitedColor: rgb(255, 251, 0);
+    --titleColor: orange;
+    --footerBG: black;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--aColor);
+}
+
+a:visited {
+    color: var(--aVisitedColor);
+}
+
+#main {
+    margin: 20px;
+    padding: 15px;
+    background-color: var(--mainBG);
+    border-radius: 5px;
+}
+
+@media (max-width: 460px) {
+    #main {
+        margin: 0;
+    }
+}
+
+.title-container {
+    margin-top: 20px;
+}
+
+#title,
+.title-p {
+    text-align: center;
+}
+
+#title {
+    color: var(--titleColor);
+}
+
+.title-p {
+    margin-bottom: 50px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img-div {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+#img-caption {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.row1 {
+    width: 100%;
+}
+
+.row2 {
+    text-align: left !important;
+}
+
+@media(max-width:460px) {
+    #img-caption {
+        width: 100%;
+    }
+}
+
+@media(max-width:700px) {
+    #img-caption {
+        width: 100%;
+        margin-left: unset;
+        transform: unset;
+    }
+    #img-caption p {
+        font-size: 14px;
+    }
+    .row1 {
+        text-align: center !important;
+    }
+}
+
+#tribute-info {
+    background-color: var(--tributeBG);
+    padding: 15px;
+}
+
+#tribute-info>h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#tribute-info>p {
+    line-height: 25px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.tribute-content span {
+    color: var(--titleColor);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--footerBG);
+    padding: 5px;
+}
+
+footer>h5 {
+    text-align: center;
+}
